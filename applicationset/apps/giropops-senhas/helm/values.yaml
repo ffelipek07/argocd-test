@@ -1,6 +1,6 @@
 # values.yaml
 giropopsSenhas:
-  image: ffelipek07/linuxtips-giropops-senhas:sha256-baa2abb60c869904e5b8f12bfab15cf7c3e1a10a8c8e4acdab58eeb66c7568ed.sig
+  image: ffelipek07/linuxtips-giropops-senhas:3d8b7-20241011221832
   replicas: 2
   port: 5000
   imagePullPolicy: Always
