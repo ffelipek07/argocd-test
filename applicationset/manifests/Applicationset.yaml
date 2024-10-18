@@ -18,7 +18,7 @@ spec:
     spec:
       project: "default"
       source:
-        repoURL: hhttps://github.com/ffelipek07/argocd-test.git
+        repoURL: https://github.com/ffelipek07/argocd-test.git
         targetRevision: feat/devops
         path: '{{.path.path}}'
       destination:
