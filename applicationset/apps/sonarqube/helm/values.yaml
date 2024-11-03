@@ -1,0 +1,35 @@
+# values.yaml
+
+## SonarQube Configuration
+sonar:
+  image:
+    tag: "10.8.0"  # A versão do SonarQube que você deseja usar
+
+  persistence:
+    enabled: true
+    storageClass: gp2  # Certifique-se de que esse StorageClass existe
+    size: 10Gi  # Tamanho do volume para o SonarQube
+
+## PostgreSQL Configuration
+postgresql:
+  enabled: true  # Habilita o PostgreSQL
+  image:
+    tag: "10.15.0"  # Versão do PostgreSQL
+  persistence:
+    enabled: true
+    storageClass: gp2  # Certifique-se de que esse StorageClass existe
+    size: 10Gi  # Tamanho do volume para o PostgreSQL
+  postgresqlDatabase: sonar  # Nome do banco de dados
+  postgresqlUsername: sonar  # Nome de usuário do banco de dados
+  postgresqlPassword: sonar  # Senha do banco de dados (pode ser alterada)
+
+## Recursos e Limites
+resources:
+  requests:
+    memory: "2Gi"  # Memória mínima solicitada
+    cpu: "500m"    # CPU mínima solicitada
+  limits:
+    memory: "4Gi"  # Memória máxima permitida
+    cpu: "1"       # CPU máxima permitida
+
+# Adicione outras configurações conforme necessário
